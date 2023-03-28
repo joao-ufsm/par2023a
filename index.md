@@ -27,7 +27,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 |---:|------------------|:-----------------|
 |  1 | 2022-03-21 Ter | Apresentação da disciplina   |
 |  2 | 2022-03-23 Qui   | [Introdução C++](./aulas/introducao_cxx) ([vídeo](https://youtu.be/pB-MdBKNpNo), [slides](./aulas/02_intro_cxx/02_intro_cxx.pdf)) |
-|  3 | 2022-03-28 Ter   | Introdução a Programação Paralela |
+|  3 | 2022-03-28 Ter   | [Introdução a Programação Paralela](./aulas/01_progpar/01_intro_progpar.pdf) |
 |  4 | 2022-03-30 Qui   | Arquiteturas de Computadores Paralelos |
 |  5 | 2022-04-04 Ter   | Arquiteturas de Computadores Paralelos  |
 |  6 | 2022-04-06 Qui   | Modelos de Programação Paralela |

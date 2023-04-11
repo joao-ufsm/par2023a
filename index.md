@@ -30,7 +30,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 |  3 | 2022-03-28 Ter   | [Introdução a Programação Paralela](./aulas/01_progpar/01_intro_progpar.pdf) |
 |  4 | 2022-03-30 Qui   | [Arquiteturas de Computadores Paralelos](./aulas/03_arquiteturas/03_arquiteturas.pdf) |
 |  5 | 2022-04-04 Ter   | Arquiteturas de Computadores Paralelos  |
-|  6 | 2022-04-06 Qui   | Modelos de Programação Paralela |
+|  6 | 2022-04-06 Qui   | [Modelos de Programação Paralela](./aulas/04_modelos_programacao/04_modelos_programacao.pdf) |
 |  7 | 2022-04-11 Ter   | Análise de Desempenho |
 |  8 | 2022-04-13 Qui   | Programação Paralela com MPI |
 |  9 | 2022-04-18 Ter   | Programação Paralela com MPI |

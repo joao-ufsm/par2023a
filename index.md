@@ -32,7 +32,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 |  5 | 2022-04-04 Ter   | Arquiteturas de Computadores Paralelos  |
 |  6 | 2022-04-06 Qui   | Arquiteturas de Computadores Paralelos |
 |  7 | 2022-04-11 Ter   | [Modelos de Programação Paralela](./aulas/04_modelos_programacao/04_modelos_programacao.pdf) |
-|  8 | 2022-04-13 Qui   | [Programação Paralela com MPI](./aulas/05_mpi/05_mpi.pdf) |
+|  8 | 2022-04-13 Qui   | [Programação Paralela com MPI](./aulas/05_mpi/05_mpi.pdf). MPI no [Google Colab](https://colab.research.google.com/drive/16FqO4uorwcd7jUMQnHsqXWscKE2qz2Xa?usp=sharing) |
 |  9 | 2022-04-18 Ter   | Análise de Desempenho |
 | 10 | 2022-04-20 Qui   | Programação Paralela com MPI  |
 | 11 | 2022-04-25 Ter   | Programação Paralela com MPI  |

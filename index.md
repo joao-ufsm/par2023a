@@ -16,6 +16,11 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 
 ## Material de apoio
 
+- [Designing and Building Parallel Programs](https://www.mcs.anl.gov/~itf/dbpp/), Ian Foster
+- [An Introduction to Parallel Programming](https://www.cs.usfca.edu/~peter/ipp/), Peter Pacheco
+- [Introduction to Parallel Computing Tutorial](https://hpc.llnl.gov/documentation/tutorials/introduction-parallel-computing-tutorial)
+- [MPI Tutorial](https://hpc-tutorials.llnl.gov/mpi/)
+- [OpenMP Tutorial](https://hpc-tutorials.llnl.gov/openmp/)
 - [GitHub Handbook](https://guides.github.com/introduction/git-handbook/)
 - [Git Cheat Sheets](https://github.github.com/training-kit/)
 - [Tech Talk: Linux Tolvards on Git](http://youtu.be/4XpnKHJAok8)

@@ -40,7 +40,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 |  8 | 2022-04-13 Qui   | [Programação Paralela com MPI](./aulas/05_mpi/05_mpi.pdf). MPI no [Google Colab](https://colab.research.google.com/drive/16FqO4uorwcd7jUMQnHsqXWscKE2qz2Xa?usp=sharing) |
 |  9 | 2022-04-18 Ter   | [Análise de Desempenho](./aulas/06_metricas/06_metricas.pdf) |
 | 10 | 2022-04-20 Qui   | [Programação Paralela com MPI](./aulas/07_mpi/07_mpi.pdf), [Google Colab com exemplos](https://colab.research.google.com/drive/1E0Q20YoaT1XZJf0YDEy4NFJsf55fcr3I?usp=sharing)  |
-| 11 | 2022-04-25 Ter   | Programação Paralela com MPI  |
+| 11 | 2022-04-25 Ter   | [Programação Paralela com MPI](./aulas/08_mpi/08_mpi.pdf)  |
 | 12 | 2022-04-27 Qui   | Programação Paralela com MPI |
 | 13 | 2022-05-02 Ter   | T1  |
 | 14 | 2022-05-04 Qui   | Programação Paralela com OpenMP |

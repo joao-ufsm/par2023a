@@ -43,6 +43,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 | 11 | 2022-04-25 Ter   | [Programação Paralela com MPI](./aulas/08_mpi/08_mpi.pdf)  |
 | 12 | 2022-04-27 Qui   | [Fractais de Mandelbrot em MPI](https://colab.research.google.com/drive/1g_wij0TMO1uZy2UH99Y7FCC6q-EBOr0n?usp=sharing), [código fonte](https://github.com/joao-ufsm/par2023a/tree/master/exemplos/fractal) |
 | 13 | 2022-05-02 Ter   | [Programação Paralela com OpenMP](./aulas/13_openmp/13_openmp.pdf)   |
+|  | 2022-05-02 Ter   | [T1 - Mandelbrot](./trabalhos/T1) |
 | 14 | 2022-05-04 Qui   | Programação Paralela com OpenMP |
 | 15 | 2022-05-09 Ter   | Programação Paralela com OpenMP |
 | 16 | 2022-05-11 Qui   | Programação Paralela com OpenMP |

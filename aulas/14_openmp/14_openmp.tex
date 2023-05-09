@@ -1,0 +1,477 @@
+
+\documentclass[xcolor={usenames,dvipsnames},12pt,presentation,aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage[brazilian]{babel}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{times,mathptmx}
+\usepackage{pdfpages}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{alltt}
+\usepackage{minted}
+%\usepackage{times}
+%\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[usenames,dvipsnames]{color}
+%\usepackage{color}
+
+\usetikzlibrary{arrows,shapes}
+
+\usetheme{Madrid}
+%\usetheme{Boadilla}
+%\usetheme{Darmstadt}
+%\usetheme{Frankfurt}
+%\usetheme{CambridgeUS}
+%\usetheme{AnnArbor}
+%\usecolortheme{beaver}
+%\usecolortheme{seahorse}
+%\usecolortheme{seagull}
+\usecolortheme[named=BrickRed]{structure}
+
+\setbeamercovered{transparent}
+
+\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{navigation symbols}{}
+%\setbeamersize{text margin left=1em,text margin right=1em}
+
+\newcommand{\titulo}{Programação Paralela com OpenMP}
+\newcommand{\disciplina}{ELC139 - Programação Paralela}
+\newcommand{\nome}{João Vicente Ferreira Lima (UFSM)}
+
+\lecture[1]{\aula}{aula01}
+\def\lecturename{\aula}
+
+\newcommand{\Red}[1]{{\color{red}#1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\Blue}[1]{{\color{blue}#1}}
+\newcommand{\blue}[1]{{\color{blue}#1}}
+
+\newcommand{\PBS}[1]{\let\temp=\\#1\let\\=\temp}
+\newcommand{\RRCOL}{\PBS\raggedright\hspace{0pt}}
+
+\newcommand{\p}[1]{\texttt{#1}}
+\newenvironment{code}{%
+  \begin{alltt}%
+  }{%
+  \end{alltt}%
+}
+
+% https://github.com/joao-lima/ATPESC
+
+\makeatletter
+%\setbeamertemplate{headline}{}
+% {%
+%   \leavevmode%
+%   \@tempdimb=2.4375ex%
+%   \ifnum\beamer@subsectionmax<\beamer@sectionmax%
+%     \multiply\@tempdimb by 4%
+%   \else%
+%     \multiply\@tempdimb by\beamer@subsectionmax%
+%   \fi%
+%   \ifdim\@tempdimb>0pt%
+%     \advance\@tempdimb by 1.125ex%
+%     \begin{beamercolorbox}[wd=.5\paperwidth,ht=\@tempdimb]{section in head/foot}%
+%       \vbox to\@tempdimb{\vfil\insertsectionnavigation{.5\paperwidth}\vfil}%
+%     \end{beamercolorbox}%
+%     \begin{beamercolorbox}[wd=.45\paperwidth,ht=\@tempdimb]{subsection in head/foot}%
+%       \vbox
+%       to\@tempdimb{\vfil\insertsubsectionnavigation{.45\paperwidth}\vfil}%
+%     \end{beamercolorbox}%
+%     \begin{beamercolorbox}[wd=.05\paperwidth,ht=\@tempdimb]{subsection in head/foot}%
+%       \vbox
+%       to\@tempdimb{\vfil\hfil\insertframenumber\vfil\vfil}%
+%     \end{beamercolorbox}%
+%   \fi%
+% }
+
+\def\dohead{\beamer@headcounter=4\relax\beamer@headcounter=1\loop\ifnum\beamer@headcounter<\beamer@totalheads%
+  \advance\beamer@headcounter by1\relax%
+  \csname @@head\the\beamer@headcounter\endcsname\repeat}
+
+\makeatother
+
+\title[\titulo]{\titulo}
+
+\subtitle{\disciplina}
+
+\author[João V. F. Lima]{\nome}
+
+%\institute[UFSM]{Departamento de Linguagens e Sistemas de Computação \\ Universidade Federal de Santa Maria \\ \url{jvlima@inf.ufsm.br} \\ \url{http://www.inf.ufsm.br/~jvlima}}
+\institute[UFSM]{Universidade Federal de Santa Maria \\ \url{jvlima@inf.ufsm.br} \\ \url{http://www.inf.ufsm.br/~jvlima}}
+\date{2023/1}
+
+\graphicspath{{.}{figs/}}
+
+\logo{ \includegraphics[height=1.5cm,width=1.5cm,keepaspectratio]{logo_inf}    
+        \includegraphics[height=1.5cm,width=1.5cm,keepaspectratio]{logo_ufsm} }
+
+%\titlegraphic{
+%	\includegraphics[width=2cm]{logo_ufsm}
+%  \hspace{1cm}
+%	\includegraphics[width=2cm]{logo_inf}
+%}
+
+\newtheorem{mydef}{Definição}[section]
+%\newtheorem{myteo}{Teorema}[section]
+%------------------------------------------------------------------------------
+%\newcommand{\xkaapi}{XKaapi\xspace}
+%------------------------------------------------------------------------------
+% Typesetting Listings
+\usepackage{listings}
+\lstset{
+  language=C,
+  %basicstyle=\scriptsize\ttfamily,
+  %basicstyle=\normalsize\ttfamily,
+  basicstyle=\small\ttfamily,
+  %basicstyle=\footnotesize\ttfamily,
+  %aboveskip=0pt,
+  %belowskip=0pt,
+  %mathescape=false,
+  columns=fullflexible,
+  %numbers=none,
+  numbers=left,
+  numbersep=5pt,
+%  showtabs=true,
+%  showspaces=true,
+  frame=tb,
+  breaklines=true
+}
+%------------------------------------------------------------------------------
+%\lstset{commentstyle=\color{blue}}
+%\lstset{stringstyle=\ttfamily}
+%\lstset{ classoffset=1, 
+%            morekeywords={kaapi,omp,task,data,alloca, declare, reduction, identity, parallel,sync,taskwait,cilk,spawn,tbb,css,cilk\_spawn,cilk\_sync,cilk\_for,offload},
+%            keywordstyle=\color{Red}\bfseries
+%           }
+%\lstset{ classoffset=2, 
+%            morekeywords={value,read,write,readwrite,reduction,untied,firstprivate,TaskBodyCPU,TaskBodyGPU,ka,Signature,RW,CW,range2d\_r,range2d\_rw,range2d,Spawn,Fork,Shared\_w,Shared\_r,Shared,a1,target,device,copyin,copyout,input,implements,copy\_deps,RPWP,range2d\_rpwp,rangeindex,Memory,Register,SetStaticSched,Sync,Unregister,Community,System,join\_community,SpawnMain,leave,initialize,terminate,logfile,array,SetArch,ArchHost,ArchCUDA,W,R,gpuStream,pointer\_w,pointer\_r,pointer\_cw,pointer},
+%            keywordstyle=\color{Blue}\bfseries
+%           }
+%\lstset{ classoffset=3, 
+%            morekeywords={storage,ld},
+%            keywordstyle=\bfseries
+%           }
+%\lstset{ classoffset=4, 
+%            morekeywords={in,out,inout,cout,concurrent},
+%            keywordstyle=\color{Red}\bfseries
+%           }
+%           
+%\lstset{classoffset=0, showstringspaces=false}
+%------------------------------------------------------------------------------
+\mdfsetup{
+  backgroundcolor=gray!10,
+%  roundcorner=10pt,
+}
+%------------------------------------------------------------------------------
+\newcommand{\restorefootline}{\setbeamertemplate{navigation symbols}{}}
+%\newcommand{\setfootline}[1]{\setbeamertemplate{navigation symbols}{\textcolor{black}{\textbf{#1}}}}
+\newcommand{\includeslides}[4]{%
+%  \setfootline{#1}%
+  {
+    \setbeamercolor{background canvas}{bg=}
+    \includepdf[pages={#1},%
+    pagecommand={},
+%    pagecommand={\begin{frame}[default]{}\end{frame}},
+%    #4,%
+    turn=false,noautoscale=false,column=false,columnstrict=false,openright=false,frame=false]{#2}%
+  }
+  %\restorefootline%
+}
+%------------------------------------------------------------------------------
+\begin{document}
+
+\begin{frame}
+%  \titlepage
+  \maketitle
+%  \mode<presentation>
+%  {
+%    \begin{columns}
+%      \begin{column}{0.5\textwidth}
+%      \raggedleft
+%	\includegraphics[width=2cm]{logo_ufsm}
+%      \end{column}
+%      \begin{column}{0.5\textwidth}
+%	\includegraphics[width=2cm]{logo_inf}
+%      \end{column}
+%    \end{columns}
+%  }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Outline}
+%    \tableofcontents[hideallsubsections]
+    \tableofcontents
+\end{frame}
+
+\AtBeginSection{
+  \begin{frame}
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+    \begin{frame}
+        \frametitle{Outline}
+        \tableofcontents[currentsection,currentsubsection]
+    \end{frame}
+}
+
+%\begin{minted}[linenos, fontsize=\small, breaklines=true, frame=lines]{C}
+%\end{minted}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introdução}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Exemplo: Pi}
+\begin{minipage}{0.95\textwidth}  
+\begin{minted}[linenos, fontsize=\small, breaklines=true, frame=lines]{C} 
+for (i=1;i<= num_steps; i++){
+  x = (i-0.5)*step;
+  sum = sum + 4.0/(1.0+x*x);
+}
+\end{minted}
+\end{minipage}
+%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Exemplo: Pi OpenMP}
+\begin{itemize}
+  \item \mintinline{C}|x| precisa ser privado
+  \item \mintinline{C}|sum| é somado por todos
+\end{itemize}
+\begin{minipage}{0.95\textwidth}  
+\begin{minted}[linenos, fontsize=\small, breaklines=true, frame=lines]{C} 
+#pragma omp parallel for private(x) reduction(+:sum)
+for (i=1;i<= num_steps; i++){
+  x = (i-0.5)*step;
+  sum = sum + 4.0/(1.0+x*x);
+}
+\end{minted}
+\end{minipage}
+%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Exemplo: Histograma}
+\begin{minipage}{0.95\textwidth}  
+\begin{minted}[linenos, fontsize=\small, breaklines=true, frame=lines]{C} 
+for(int i=0;i<num_trials;i++){
+    
+  long ival = (long) (x[i] - xlow)/bucket_width;
+
+  hist[ival]++;  
+}
+\end{minted}
+\end{minipage}
+%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Exemplo: Histograma OpenMP}
+\begin{minipage}{0.95\textwidth}  
+\begin{minted}[linenos, fontsize=\small, breaklines=true, frame=lines]{C} 
+#pragma omp parallel for
+for(int i=0;i<num_trials;i++){
+    
+    long ival = (long) (x[i] - xlow)/bucket_width;
+
+    #pragma omp critical
+        hist[ival]++;   
+}
+\end{minted}
+\end{minipage}
+%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Exemplo: Histograma OpenMP}
+\begin{minipage}{0.95\textwidth}  
+\begin{minted}[linenos, fontsize=\small, breaklines=true, frame=lines]{C} 
+#pragma omp parallel for reduction(+:hist[0:num_buckets])
+for(int i=0;i<num_trials;i++){
+    
+    long ival = (long) (x[i] - xlow)/bucket_width;
+
+    hist[ival]++; 
+}
+\end{minted}
+\end{minipage}
+%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Exemplo: Jacobi}
+  \begin{itemize}
+    \item $Ax = b$
+  \end{itemize}
+%
+\begin{columns}
+  \begin{column}{0.6\textwidth} 
+\begin{minipage}{0.95\textwidth}  
+  \begin{minted}[linenos, fontsize=\scriptsize, breaklines=true, frame=lines]{C} 
+while((conv > TOLERANCE) && (iters<MAX_ITERS))
+{
+  iters++;
+  xtmp  = xnew;   // don't copy arrays.
+  xnew  = xold;   // just swap pointers.
+  xold  = xtmp;
+
+  for (i=0; i<Ndim; i++){
+      xnew[i] = (TYPE) 0.0;
+      for (j=0; j<Ndim;j++){
+          if(i!=j)
+            xnew[i]+= A[i*Ndim + j]*xold[j];
+      }
+      xnew[i] = (b[i]-xnew[i])/A[i*Ndim+i];
+
+  }
+  \end{minted}
+  \end{minipage}    
+  \end{column}
+  \begin{column}{0.4\textwidth}
+\begin{minipage}{0.95\textwidth}  
+  \begin{minted}[linenos, fontsize=\scriptsize, breaklines=true, frame=lines]{C} 
+  //
+  // test convergence    
+  //
+  conv = 0.0;
+  for (i=0; i<Ndim; i++){
+      tmp  = xnew[i]-xold[i];
+      conv += tmp*tmp;
+  }
+  conv = sqrt((double)conv);
+}
+  \end{minted}
+  \end{minipage}      
+  \end{column}
+\end{columns}
+%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Exemplo: Jacobi OpenMP}
+%
+\begin{columns}
+  \begin{column}{0.6\textwidth} 
+\begin{minipage}{0.95\textwidth}  
+\begin{minted}[linenos, fontsize=\scriptsize, breaklines=true, frame=lines]{C} 
+while((conv > TOLERANCE*TOLERANCE) && (iters<MAX_ITERS))
+{
+  {
+      iters++;
+      conv = 0.0;
+      xtmp  = xnew;   // don't copy arrays.
+      xnew  = xold;   // just swap pointers.
+      xold  = xtmp;
+  }
+
+  #pragma omp parallel for private(i,j)
+  for (i=0; i<Ndim; i++){
+      xnew[i] = (TYPE) 0.0;
+      for (j=0; j<Ndim;j++){
+        xnew[i]+= A[i*Ndim + j]*xold[j] * (i != j);
+      }
+      xnew[i] = (b[i]-xnew[i])/A[i*Ndim+i];
+
+  }
+\end{minted}
+  \end{minipage}    
+  \end{column}
+  \begin{column}{0.4\textwidth}
+\begin{minipage}{0.95\textwidth}  
+\begin{minted}[linenos, fontsize=\scriptsize, breaklines=true, frame=lines]{C} 
+  //  
+  // test convergence
+  //
+  #pragma omp parallel for private(tmp) reduction(+:conv)
+  for (i=0; i<Ndim; i++){
+      tmp  = xnew[i]-xold[i];
+      conv += tmp*tmp;
+  }
+}
+\end{minted}
+  \end{minipage}      
+  \end{column}
+\end{columns}
+%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+  \frametitle{Exemplo: Jacobi OpenMP}
+%
+\begin{columns}
+  \begin{column}{0.6\textwidth} 
+\begin{minipage}{0.95\textwidth}  
+\begin{minted}[linenos, fontsize=\scriptsize, breaklines=true, frame=lines]{C} 
+#pragma omp parallel default(none) private(tmp) \
+  shared (Ndim, conv, iters, b, A, xnew, xold, xtmp) 
+{
+  while((conv > TOLERANCE*TOLERANCE) && (iters<MAX_ITERS))
+  {
+    #pragma omp single
+    {
+      xtmp  = xnew;   // don't copy arrays.
+      xnew  = xold;   // just swap pointers.
+      xold  = xtmp;
+    }
+    #pragma omp for private(i,j) nowait
+    for (i=0; i<Ndim; i++){
+      xnew[i] = (TYPE) 0.0;
+      for (j=0; j<Ndim;j++){
+        xnew[i]+= A[i*Ndim + j]*xold[j] * (i != j);
+      }
+      xnew[i] = (b[i]-xnew[i])/A[i*Ndim+i];
+    }
+\end{minted}
+  \end{minipage}    
+  \end{column}
+  \begin{column}{0.4\textwidth}
+\begin{minipage}{0.95\textwidth}  
+\begin{minted}[linenos, fontsize=\scriptsize, breaklines=true, frame=lines]{C} 
+  #pragma omp single
+  {
+    iters++;
+    conv = 0.0;
+  }
+
+  // test convergence
+  #pragma omp for private(tmp) reduction(+:conv)
+  for (i=0; i<Ndim; i++){
+    tmp  = xnew[i]-xold[i];
+    conv += tmp*tmp;
+  }
+}
+}
+\end{minted}
+  \end{minipage}      
+  \end{column}
+\end{columns}
+%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%------------------------------------------------------------------------------
+\begin{frame}[plain]{}
+  \begin{center}
+    \vspace{2cm}
+    \Large{https://joao-ufsm.github.io/par2023a/}
+    
+    \vspace{1cm}
+    \includegraphics[width=2cm]{logo_ufsm}
+    \hspace{0.5cm}
+    \includegraphics[width=2cm]{logo_inf}
+  \end{center}
+\end{frame}
+%------------------------------------------------------------------------------
+
+\end{document}

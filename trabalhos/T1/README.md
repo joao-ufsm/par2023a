@@ -3,7 +3,7 @@
 
 ## Deadline
 
-Prazo: **16/05/2023** pelo link do GitHub (https://classroom.github.com/a/z_yut7VS).
+Prazo: **22/05/2023 (Seg)** pelo link do GitHub (https://classroom.github.com/a/z_yut7VS).
 
 Você deve escolher seu nome na lista de alunos. Em seguida, o GitHub irá criar um repositório deste trabalho em seu usuário.
 

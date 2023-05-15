@@ -47,7 +47,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 | 14 | 2022-05-04 Qui   | Programação Paralela com OpenMP |
 | 15 | 2022-05-09 Ter   | [Programação Paralela com OpenMP](aulas/14_openmp/14_openmp.pdf) |
 | 16 | 2022-05-11 Qui   | [Programação Paralela com OpenMP](https://tinyurl.com/openmp-umt-tasking) |
-| 17 | 2022-05-16 Ter   | Programação Paralela com OpenMP |
+| 17 | 2022-05-16 Ter   | [Programação Paralela com OpenMP](./aulas/15_openmp/15_openmp.pdf) |
 | 18 | 2022-05-18 Qui   | Programação Paralela com OpenMP |
 | 19 | 2022-05-23 Ter   | T2 |
 | 20 | 2022-05-25 Qui   | Programação Paralela com CUDA |

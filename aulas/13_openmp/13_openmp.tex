@@ -1,4 +1,4 @@
-
+ 
 \documentclass[xcolor={usenames,dvipsnames},12pt,presentation,aspectratio=169]{beamer}
 
 \usepackage[utf8]{inputenc}
@@ -1115,62 +1115,6 @@ OpenMP \mintinline{C}{barrier}
 %Necessitamos dos dois valores no cálculo.
 %\end{exampleblock}
 %%
-%\end{frame}
-%
-%\begin{frame}[fragile]
-%  \frametitle{Dependências de Dados}
-%  \begin{itemize}
-%  \item OpenMP 4.0 inclui dependências de dados entre tarefas (\texttt{task})
-%  \pause
-%  \item Diretiva \texttt{depend}
-%    \begin{itemize}
-%    \item \texttt{in} -- dados de entrada
-%    \item \texttt{out} -- dados de saída
-%    \item \texttt{inout} -- dados de entrada e saída
-%    \end{itemize}
-%  \pause
-%  \item Sincronização recursiva pela construção \texttt{taskgroup}
-%    \begin{itemize}
-%    \item Sincroniza um bloco de código
-%    \item \texttt{taskwait} \alert{sincroniza tarefas criadas no mesmo nível}
-%    \end{itemize}
-%  \end{itemize}
-%%
-%\pause
-%%
-%\begin{block}{Dependências de dados}
-%\begin{lstlisting}
-%#pragma omp taskgroup
-%{
-%  #pragma omp task depend(in:dados) \
-%    depend(out:saida)
-%  foo(dados, saida);
-%}
-%\end{lstlisting}
-%\end{block}
-%%
-%\end{frame}
-%
-%\begin{frame}[fragile]
-%  \frametitle{Dependências de Dados}
-%\begin{block}{Fibonacci com OpenMP \texttt{depend}}
-%\begin{lstlisting}
-%int fib( int n ) {
-%  int x, y;
-%  if( n < 2 ) return n;
-%  #pragma omp taskgroup
-%  {
-%    #pragma omp task shared(x) depend(in:n) \
-%        depend(out:x)
-%    x = fib( n - 1);
-%    #pragma omp task shared(y) depend(in:n) \
-%      depend(out:y)
-%    y = fib( n - 2);
-%  }
-%  return x + y;
-%}
-%\end{lstlisting}
-%\end{block}
 %\end{frame}
 %
 

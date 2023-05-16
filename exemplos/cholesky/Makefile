@@ -1,6 +1,6 @@
 MKL_HOME=/opt/intel/oneapi/mkl/latest
 
-PROGRAM= cholesky-tiled-seq cholesky-tiled-for cholesky-tile-for-opt cholesky-tiled-dataflow
+PROGRAM= cholesky-tiled-seq cholesky-tiled-for cholesky-tiled-for-opt cholesky-tiled-dataflow
 
 CC=gcc
 CFLAGS=-O3 -std=gnu99 -I$(MKL_HOME)/include -fopenmp

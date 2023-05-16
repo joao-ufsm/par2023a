@@ -9,7 +9,7 @@ Você deve escolher seu nome na lista de alunos. Em seguida, o GitHub irá criar
 
 ## Descrição
 
-O programa [mandel.c](./mandel.c) calcula a área do Conjunto de Mandelbrot. Este programa já está implementado com OpenMP através de laços paralelos.
+O programa [mandel.c](./mandel.c) calcula a área do [Conjunto de Mandelbrot](https://pt.wikipedia.org/wiki/Conjunto_de_Mandelbrot). Este programa já está implementado com OpenMP através de laços paralelos.
 
 Porém, o programa está com diversos *bugs* e o resultado final deveria ter sido `1.510659`. Encontre os erros e faça as correções necessárias.
 

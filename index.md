@@ -49,7 +49,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 | 16 | 2022-05-11 Qui   | [Programação Paralela com OpenMP - Tarefas](https://tinyurl.com/openmp-umt-tasking) |
 | 17 | 2022-05-16 Ter   | [Programação Paralela com OpenMP - Tarefas e dados)](./aulas/15_openmp/15_openmp.pdf) |
 |     | 2022-05-16 Ter   | [T2 - Mandelbrot (bugado)](./trabalhos/T2) |
-| 18 | 2022-05-18 Qui   | [Programação Paralela com OpenMP - target]() |
+| 18 | 2022-05-18 Qui   | [Programação Paralela com OpenMP - target](https://www.alcf.anl.gov/sites/default/files/2020-01/OpenMP45_Bertoni.pdf), [tutorial](https://www.nersc.gov/users/training/events/introduction-to-openmp-offload-aug-sep-2022/), [Exemplo DAXY](https://blog.rwth-aachen.de/itc-events/files/2021/02/17-openmp-CT-offloading.pdf) |
 | 19 | 2022-05-23 Ter   | - |
 | 20 | 2022-05-25 Qui   | Programação Paralela com CUDA |
 | 21 | 2022-05-30 Ter   | Programação Paralela com CUDA  |

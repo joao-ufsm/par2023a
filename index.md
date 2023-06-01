@@ -53,7 +53,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 | 19 | 2022-05-23 Ter   | [Programação Paralela com CUDA (LNCC)](http://www.cenapad-rj.lncc.br/tutoriais/materiais-hpc/semana-sdumont/verao2021/MC-SD03-I-2021-slides.pdf), [CUDA C Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/) |
 | 20 | 2022-05-25 Qui   | [Programação Paralela com CUDA (Colab)](https://colab.research.google.com/drive/1qqaAhT33m2GjivaDCMmwiNhFDqIaALRV?usp=sharing) |
 | 21 | 2022-05-30 Ter   | [Programação Paralela com CUDA (LNCC)](http://www.cenapad-rj.lncc.br/tutoriais/materiais-hpc/semana-sdumont/verao2021/MC-SD03-II-2021-slides.pdf)  |
-| 22 | 2022-06-01 Qui   | Programação Paralela com CUDA | 
+| 22 | 2022-06-01 Qui   | [Programação Paralela com CUDA](https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/S9593/) | 
 | 23 | 2022-06-06 Ter   | Programação Paralela com CUDA | 
 | - | 2022-06-08 Qui   | **Feriado** (Corpus Christi)  |
 | 24 | 2022-06-13 Ter   | Programação Paralela com CUDA |

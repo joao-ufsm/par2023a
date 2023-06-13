@@ -56,12 +56,13 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 | 22 | 2022-06-01 Qui   | [Programação Paralela com CUDA](https://developer.download.nvidia.com/video/gputechconf/gtc/2019/presentation/S9593/) | 
 | 23 | 2022-06-06 Ter   | [Programação Paralela com CUDA (Depuração)](https://www.olcf.ornl.gov/wp-content/uploads/2019/08/NVIDIA-Profilers.pdf), [Exemplo CUBLAS Batched](https://colab.research.google.com/drive/1vwuGNBBJwDszxLJqfMGe4AxyZlVRegF2?usp=sharing) | 
 | - | 2022-06-08 Qui   | **Feriado** (Corpus Christi)  |
-| 24 | 2022-06-13 Ter   | Programação Paralela com CUDA |
-| 25 | 2022-06-15 Qui   | T3 |
-| 26 | 2022-06-20 Ter   | Programação Paralela com OpenACC |
-| 27 | 2022-06-22 Qui   | Programação Paralela com OpenACC |
+| 24 | 2022-06-13 Ter   | [Programação Paralela com OpenACC](https://docs.google.com/presentation/d/1nVNP05GEzb2uACy4grNr_KwZPsiTtDBe/edit?usp=sharing&ouid=113036597464866182871&rtpof=true&sd=true), [Exemplos no Google Colab](https://colab.research.google.com/drive/1QDdHBCJeGWUL6Y7FYi1hccLuie9eVPZI?usp=sharing) |
+| 25 | 2022-06-15 Qui   | [Programação Paralela com OpenACC](https://docs.google.com/presentation/d/1nKQ9Yh51i4TD5x_Zd8l1jaDyprNqXeyZ/edit?usp=sharing&ouid=113036597464866182871&rtpof=true&sd=true) |
+| - | 2022-06-15 Qui   | T3 |
+| 26 | 2022-06-20 Ter   | [Programação Paralela com OpenACC](https://docs.google.com/presentation/d/1-CvoiQRqqnhK-MFzW0hZ7QxF0cEVJuHS/edit?usp=sharing&ouid=113036597464866182871&rtpof=true&sd=true) |
+| 27 | 2022-06-22 Qui   | Programação Paralela com TBB |
 | 28 | 2022-06-27 Ter   | T4 |
-| 29 | 2022-06-29 Qui   | Programação Paralela com TBB |
+| 29 | 2022-06-29 Qui   | - |
 | 30 | 2022-07-04 Ter   | T5 |
 |  | 2022-07-06 Qui   | |
 | - | 2022-07-11 Ter   | **Sem aula** (Sexta-feira)  |

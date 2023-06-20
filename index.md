@@ -58,7 +58,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 | - | 2022-06-08 Qui   | **Feriado** (Corpus Christi)  |
 | 24 | 2022-06-13 Ter   | [Programação Paralela com OpenACC](https://docs.google.com/presentation/d/1nVNP05GEzb2uACy4grNr_KwZPsiTtDBe/edit?usp=sharing&ouid=113036597464866182871&rtpof=true&sd=true), [Exemplos no Google Colab](https://colab.research.google.com/drive/1QDdHBCJeGWUL6Y7FYi1hccLuie9eVPZI?usp=sharing) |
 | 25 | 2022-06-15 Qui   | [Programação Paralela com OpenACC](https://docs.google.com/presentation/d/1nKQ9Yh51i4TD5x_Zd8l1jaDyprNqXeyZ/edit?usp=sharing&ouid=113036597464866182871&rtpof=true&sd=true) |
-| - | 2022-06-15 Qui   | T3 |
+| - | 2022-06-15 Qui   | [T3](./trabalhos/T3) |
 | 26 | 2022-06-20 Ter   | [Programação Paralela com OpenACC](https://docs.google.com/presentation/d/1-CvoiQRqqnhK-MFzW0hZ7QxF0cEVJuHS/edit?usp=sharing&ouid=113036597464866182871&rtpof=true&sd=true) |
 | 27 | 2022-06-22 Qui   | Programação Paralela com TBB |
 | 28 | 2022-06-27 Ter   | T4 |

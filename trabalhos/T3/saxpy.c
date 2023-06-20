@@ -9,7 +9,7 @@ void saxpy(const float alpha,
         const int size)
 {
 	for( int i = 0; i < size; i++ ) {
-		y[i] += alpha * x[i] + y[i];
+		y[i] = alpha * x[i] + y[i];
 	}
 }
 

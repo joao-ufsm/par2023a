@@ -63,7 +63,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 | 27 | 2022-06-22 Qui   | [T4](./trabalhos/T4) |
 | 28 | 2022-06-27 Ter   | - |
 | 29 | 2022-06-29 Qui   | - |
-| 30 | 2022-07-04 Ter   | - |
+| 30 | 2022-07-04 Ter   | [Jack Dongarra - A Not So Simple Matter of Software](https://youtu.be/cSO0Tc2w5Dg) |
 |  | 2022-07-06 Qui   | |
 | - | 2022-07-11 Ter   | **Sem aula** (Sexta-feira)  |
 | - | 2022-07-13 Qui   | **Sem aula** (Sábado)  |

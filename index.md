@@ -61,7 +61,7 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 | - | 2022-06-15 Qui   | [T3](./trabalhos/T3) |
 | 26 | 2022-06-20 Ter   | [Programação Paralela com TBB](https://indico.cern.ch/event/403113/contributions/1847272/attachments/1124184/1604364/04_intel_tbb.pdf), [Exemplos no Colab](https://colab.research.google.com/drive/1267YsK78U8VFk3bMQAgXVKc9fpSEHVoo?usp=sharing) |
 | 27 | 2022-06-22 Qui   | [T4](./trabalhos/T4) |
-| 28 | 2022-06-27 Ter   | - |
+| 28 | 2022-06-27 Ter   | [Slides ScoreP](https://www.vi-hps.org/cms/upload/material/tw-score-p/vi-hps-tw-scorep-08_Score_P.pdf), [ScoreP no Colab](https://colab.research.google.com/drive/18dQiqufKw8kC8mpARlWb6Ow2ZRGMY2qQ?usp=sharing) |
 | 29 | 2022-06-29 Qui   | - |
 | 30 | 2022-07-04 Ter   | [Jack Dongarra - A Not So Simple Matter of Software](https://youtu.be/cSO0Tc2w5Dg) |
 |  | 2022-07-06 Qui   | |

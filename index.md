@@ -28,6 +28,8 @@ Utilizar métodos  e  técnicas  para  o  projeto, implementação  e  uso  de s
 
 ## Trabalhos
 
+**NOTAS:** [Planilha](https://docs.google.com/spreadsheets/d/e/2PACX-1vRXp9Xq2Ubbh7Z4qN-b4YNI5mLyUykwnuO2fYydfsLymB27C7SeXW3leq1eeeMKTuaYcc6IZmdyIAaP/pubhtml)
+
 | Prazo | Peso | Asssunto   |
 |:---|----:|:------------------|
 | **18/07/2023** | `1,0` | [T4 - Jacobi Solver em OpenACC](./trabalhos/T4)  |
